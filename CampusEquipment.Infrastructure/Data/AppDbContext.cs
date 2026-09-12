@@ -38,7 +38,6 @@ public partial class AppDbContext : DbContext
             entity.HasOne(d => d.Department).WithMany(p => p.Equipment)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK_Equipment_Department");
-            //Sample Com
         });
 
         OnModelCreatingPartial(modelBuilder);
